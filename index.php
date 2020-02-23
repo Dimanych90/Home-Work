@@ -24,22 +24,22 @@ const FLOM = 23; //Фломастером
 
 const PENC = 40; //Карандашом
 
-const PAINT = PICTURE - PENC - FLOM; //красками
+echo  PICTURE - PENC - FLOM; //красками
 
-echo PAINT;
+
 
 echo '<hr>';
 echo '<br>';
 
 // задание №3
 
-$age = 34;
+$age = 18;
 if ($age >= 18 && $age <= 65
 )
     echo "Вам еще работать и работать";
 elseif ($age > 65)
     echo "Вам пора на пенсию";
-elseif ($age < 17 && $age >= 1)
+elseif ($age <= 17 && $age >= 1)
     echo "Вам пока рано работать";
 else
     echo 'Неизвестный возраст';
@@ -51,23 +51,13 @@ echo '<br>';
 $day = 7;
 switch ($day) {
     case 1:
-        echo "Это рабочий день <br>";
-        break;
     case 2:
-        echo "Это рабочий день <br>";
-        break;
     case 3:
-        echo "Это рабочий день <br>";
-        break;
     case 4:
-        echo "Это рабочий день <br>";
-        break;
     case 5:
         echo "Это рабочий день <br>";
         break;
     case 6:
-        echo 'Это выходной день <br>';
-        break;
     case 7:
         echo 'Это выходной день <br>';
         break;
@@ -107,8 +97,8 @@ $cars = ['bmw' => $bmw,
 
 foreach ($cars as $key => $value) {
     echo 'Car ' . $key . '<br>';
-    $result = implode(' ', $value);
-    echo $result . '<br>';
+    echo implode(' ',$value). '<br>' ;
+
 }
 
 echo '<hr>';
