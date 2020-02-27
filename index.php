@@ -1,4 +1,19 @@
 <?php
+
+// Задание 0
+
+CONST TEST_CONSTANTA = 'asd';
+$user_name = "Igor";
+
+function showSomething(){
+    return 'something';
+}
+
+if (1 == 1){
+    echo 'hi';
+}
+
+
 $name = 'Dimasic';       // задание №1
 $age = 29;
 
