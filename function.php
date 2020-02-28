@@ -1,3 +1,5 @@
 <?php
 
-require 'index.php';
+function showSomething(){
+    return 'something';
+}

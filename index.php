@@ -5,14 +5,13 @@
 CONST TEST_CONSTANTA = 'asd';
 $user_name = "Igor";
 
-function showSomething(){
-    return 'something';
-}
 
-if (1 == 1){
+if (1 == 1) {
     echo 'hi';
 }
 
+echo '<hr>';
+echo '<br>';
 
 $name = 'Dimasic';       // задание №1
 $age = 29;
@@ -23,10 +22,7 @@ echo '<hr>';
 echo '<br>';
 
 
-echo '-"!|/';
-echo "'";
-echo '"';
-echo '\\';
+echo '-"!|/\'"\\';
 
 echo '<hr>';
 echo '<br>';
@@ -35,12 +31,12 @@ echo '<br>';
 
 const PICTURE = 80; //Всего сколько
 
-const FLOM = 23; //Фломастером
+const MARKERS = 23; //Фломастером
 
 const PENC = 40; //Карандашом
+const PAINT = PICTURE - PENC - MARKERS;
 
-echo  PICTURE - PENC - FLOM; //красками
-
+echo 'На школьной выставке' . ' ' . PICTURE . ' ' . 'рисунков.' . ' ' . MARKERS . ' ' . 'из них выполнены фломастерами,' . ' ' . PENC . ' ' . 'карандашами, а остальные — красками:' . ' ' . PAINT; //красками
 
 
 echo '<hr>';
@@ -49,15 +45,15 @@ echo '<br>';
 // задание №3
 
 $age = 18;
-if ($age >= 18 && $age <= 65
-)
+if ($age >= 18 && $age <= 65) {
     echo "Вам еще работать и работать";
-elseif ($age > 65)
+} elseif ($age > 65) {
     echo "Вам пора на пенсию";
-elseif ($age <= 17 && $age >= 1)
+} elseif ($age <= 17 && $age >= 1) {
     echo "Вам пока рано работать";
-else
+} else {
     echo 'Неизвестный возраст';
+}
 
 echo '<hr>';
 echo '<br>';
@@ -112,7 +108,7 @@ $cars = ['bmw' => $bmw,
 
 foreach ($cars as $key => $value) {
     echo 'Car ' . $key . '<br>';
-    echo implode(' ',$value). '<br>' ;
+    echo implode(' ', $value) . '<br>';
 
 }
 
@@ -128,17 +124,17 @@ echo '<table border="1">';
 
 for ($tr = 1; $tr <= $rows; $tr++) {
 
-    echo '<tr><td>'. $tr .'</td>';
+    echo '<tr><td>' . $tr . '</td>';
     for ($td = 1; $td <= $cols; $td++) {
         if ($tr > 1) {
             $result = $td * $tr;
-            if ($result % 2 === 0) {
+            if ($td % 2 === 0) {
                 echo '<td>(' . $result . ')</td>';
-            } elseif ($result % 2 !== 0) {
+            } elseif ($td % 2 !== 0) {
                 echo '<td>[' . $result . ']</td>';
             } else
                 echo '<td>' . $result . '</td>';
-        }else{
+        } else {
             echo '<td>' . $td . '</td>';
         }
     }
